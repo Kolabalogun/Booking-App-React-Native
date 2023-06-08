@@ -15,6 +15,8 @@ export const data = [
         address:
           "346, Hennur Main Road, Post, Kalyan Nagar, 560043 Bangalore, India ",
         oldPrice: 4600,
+        location: "Bangalore, India",
+        discount: "25%",
         newPrice: 3312,
         latitude: "13.0359",
         longitude: "77.6431",
@@ -105,6 +107,8 @@ export const data = [
         address:
           " 648/B, Regenta Inn Indiranagar, Binnamangala 1st stage Indiranagar, 560038 Bangalore, India",
         oldPrice: 4201,
+        location: "Bangalore, India",
+        discount: "45%",
         newPrice: 3327,
         latitude: "12.9784",
         longitude: "77.6408",
@@ -195,6 +199,8 @@ export const data = [
           "Down Town Park, Sadahalli Gate, Kempegowda Int'l Airport Rd, 562157 Bangalore, India",
         oldPrice: 3800,
         newPrice: 3078,
+        location: "Bangalore, India",
+        discount: "25%",
         latitude: "13.1989",
         longitude: "77.7068",
         image:
@@ -285,10 +291,14 @@ export const data = [
       {
         id: "20",
         name: "FabExpress Airport Stay Inn",
+        image:
+          "https://d.otcdn.com/imglib/hotelfotos/8/2138/hotel-oyo-77349-super-7-inn-bombay-20210511002338.jpg",
         rating: 3.5,
         address:
           "CFC-4/C, Road No-2 Hardware Park, Beside TCS, Tukkuguda, 501351 Hyderabad, India",
         oldPrice: 4332,
+        location: "Hyderabad, India",
+        discount: "25%",
         newPrice: 3200,
         photos: [
           {
@@ -373,9 +383,13 @@ export const data = [
         id: "22",
         name: "Olive Service Apartments",
         rating: 4.5,
+        image:
+          "https://cf.bstatic.com/xdata/images/hotel/max1024x768/367483881.jpg?k=b4562e9e71f1a7b361509e133ac6e49ef0f8edb529cd4e9b9f3901e521b025cc&o=&hp=1",
         address:
           "Plot 73, Shilpi Valley, Gafoor Nagar, Madhapur, Opp Hitech City Mindspace, Hyderabad",
         oldPrice: 5200,
+        location: "Hyderabad, India",
+        discount: "25%",
         newPrice: 4100,
         photos: [
           {

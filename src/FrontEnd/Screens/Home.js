@@ -9,6 +9,7 @@ import {
   View,
   Button,
   KeyboardAvoidingView,
+  Alert,
 } from "react-native";
 import React, { useState } from "react";
 import Header from "../Components/Home/Header";
@@ -60,6 +61,29 @@ const Home = ({ navigation }) => {
   const [children, setchildren] = useState(0);
 
   // FUNCTION TO CHECK IF ALL DATA HAS BEEN SELECTED
+
+  const navigateToPlaces = () => {
+    if (!route.params && !selectedDate) {
+      Alert.alert("Invalid Details", "Please enter all details", [
+        {
+          text: "Cancel",
+          onPress: () => console.log("Cancel Pressed"),
+          style: "cancel",
+        },
+        { text: "OK", onPress: () => console.log("OK Pressed") },
+      ]);
+    }
+
+    if (route.params && selectedDate) {
+      navigation.navigate("Places", {
+        selectedDate,
+        children,
+        adults,
+        rooms,
+        place: route.params.input,
+      });
+    }
+  };
 
   return (
     <SafeAreaView>
@@ -198,7 +222,10 @@ const Home = ({ navigation }) => {
                   </Text>
                 </TouchableOpacity>
               </View>
-              <TouchableOpacity className=" bg-black p-3 rounded-full  mt-3">
+              <TouchableOpacity
+                onPress={() => navigateToPlaces()}
+                className=" bg-black p-3 rounded-full  mt-3"
+              >
                 <Text className=" text-white text-center">Search</Text>
               </TouchableOpacity>
             </View>

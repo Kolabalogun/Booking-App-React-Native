@@ -8,7 +8,8 @@ const SearchResults = ({ input, setInput }) => {
   const navigation = useNavigation();
 
   return (
-    <View className="py-4">
+    <View className="   mx-4">
+      <Text className="text-xl mb-2 font-bold">Places</Text>
       <FlatList
         data={data}
         renderItem={({ item }) => {
@@ -22,11 +23,11 @@ const SearchResults = ({ input, setInput }) => {
                     input: item.place,
                   });
                 }}
-                className="flex-row items-center mb-3 bg-[#f0f4f7] py-1 "
+                className="flex-row items-center mb-3 rounded-lg bg-[#f0f4f7] p-2 "
               >
                 <Image
                   source={{ uri: item.placeImage }}
-                  className="h-16 w-16 rounded-lg mr-3"
+                  className="h-14 w-14 rounded-lg mr-3"
                 />
                 <View className="gap-0.5">
                   <Text className="font-medium">{item.place}</Text>

@@ -7,6 +7,7 @@ import {
   View,
 } from "react-native";
 import React from "react";
+import { AntDesign } from "@expo/vector-icons";
 
 const HotDealCard = ({
   image,
@@ -15,11 +16,12 @@ const HotDealCard = ({
   location,
   pricePerNight,
   discount,
+  imageUrl,
 }) => {
   return (
     <TouchableOpacity className="h-48 mt-3 mb-4 ">
       <ImageBackground
-        source={image}
+        source={imageUrl ? { uri: imageUrl } : image}
         resizeMode="cover"
         style={{ flex: 1, borderRadius: 10 }}
         imageStyle={{ borderRadius: 10 }}
@@ -34,8 +36,13 @@ const HotDealCard = ({
             justifyContent: "space-between",
           }}
         >
-          <View className="rounded-full p-1 bg-[#ff8a64] w-16 flex items-center">
-            <Text className="text-white font-semibold">{discount} OFF</Text>
+          <View className="justify-between flex-row items-center">
+            <View className="rounded-full p-1 bg-[#ff8a64] w-16 flex items-center">
+              <Text className="text-white font-semibold">{discount}</Text>
+            </View>
+            <TouchableOpacity>
+              <AntDesign name="hearto" size={22} color="white" />
+            </TouchableOpacity>
           </View>
           <View className="gap-1 ">
             <View className="flex justify-between items-center flex-row ">
