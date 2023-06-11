@@ -9,10 +9,9 @@ import {
   MaterialIcons,
 } from "@expo/vector-icons";
 
-const Header = ({ title }) => {
+const Header = ({ title, setmodalVisiblle, SearchResults }) => {
   const navigation = useNavigation();
 
-  const [typeOfTrip, typeOfTripF] = useState("roundTrip");
   return (
     <View className="mb-2">
       <View className="flex bg-black justify-between items-center p-4 flex-row ">
@@ -43,14 +42,14 @@ const Header = ({ title }) => {
         <View>
           <View className="flex flex-row justify-between my-2 px-2">
             <TouchableOpacity
-              onPress={() => typeOfTripF("roundTrip")}
+              onPress={() => setmodalVisiblle(true)}
               className={`py-1.5 px-4 border-[#e8e8e8] border-[1px]  rounded-full flex-row items-center justify-center gap-1 `}
             >
               <MaterialIcons name="sort" size={18} color="black" />
               <Text className="font-bold text-black text-[13px]  ">Sort</Text>
             </TouchableOpacity>
             <TouchableOpacity
-              onPress={() => typeOfTripF("oneTrip")}
+              onPress={() => setmodalVisiblle(true)}
               className={`py-1.5 px-4 border-[#e8e8e8] border-[1px]  rounded-full flex-row items-center justify-center gap-1`}
             >
               <Ionicons name="filter" size={18} color="black" />
@@ -60,7 +59,11 @@ const Header = ({ title }) => {
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={() => typeOfTripF("Muiticity")}
+              onPress={() =>
+                navigation.navigate("Map", {
+                  SearchResults,
+                })
+              }
               className={`py-1.5 px-4 border-[#e8e8e8] border-[1px]  rounded-full flex-row items-center gap-0.5`}
             >
               <Entypo name="location-pin" size={18} color="black" />
