@@ -127,8 +127,7 @@ const Places = () => {
               text="Apply"
               textStyle={{ color: "white", fontSize: 13 }}
               style={{
-                marginBottom: 20,
-
+                marginBottom: 10,
                 backgroundColor: "black",
               }}
               onPress={() => applySort(selectedFilter)}
